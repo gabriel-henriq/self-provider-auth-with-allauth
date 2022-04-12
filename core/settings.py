@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = "www.google.com"
+
+ACCOUNT_LOGOUT_REDIRECT = "www.facebook.com"
+
+OAUTH_SERVER_BASEURL = "http://127.0.0.1:8000/accounts/login"
 
 # Application definition
 
@@ -44,9 +49,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+    # OAuth2
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "provider",
 ]
 
 SITE_ID = 1
